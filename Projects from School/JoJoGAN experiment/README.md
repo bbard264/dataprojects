@@ -1,14 +1,6 @@
-# JoJoGAN: One Shot Face Stylization w/ video results & training script
-[![arXiv](https://img.shields.io/badge/arXiv-2112.11641-b31b1b.svg)](https://arxiv.org/abs/2112.11641)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mchong6/JoJoGAN/blob/main/stylize.ipynb)
-[![Replicate](https://replicate.com/mchong6/jojogan/badge)](https://replicate.com/mchong6/jojogan)
-[![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/JoJoGAN)
-[![Wandb Report](https://raw.githubusercontent.com/wandb/assets/main/wandb-github-badge-28.svg)](https://wandb.ai/akhaliq/jojogan/reports/JoJoGAN-One-Shot-Face-Stylization-with-Wandb-and-Gradio---VmlldzoxNDMzNzgx)
+# JoJoGAN: One Shot Face Stylization
 
-![](teasers/teaser.jpg)
-
-This is the PyTorch implementation of [JoJoGAN: One Shot Face Stylization](https://arxiv.org/abs/2112.11641).
-
+This is the experiment of [JoJoGAN: One Shot Face Stylization](https://arxiv.org/abs/2112.11641).
 
 >**Abstract:**<br>
 While there have been recent advances in few-shot image stylization, these methods fail to capture stylistic details
@@ -17,42 +9,6 @@ for a model to learn, especially so under a limited data setting. In this work, 
 a reference style image, we approximate paired real data using GAN inversion and finetune a pretrained StyleGAN using
 that approximate paired data. We then encourage the StyleGAN to generalize so that the learned style can be applied
 to all other images.
-
-## This is a forked Windows Installation Tutorial and the main codes will not be updated
-
-Follow this YouTube [tutorial]() to understand the installation process more easily and if you have any questions feel free to join my [discord](https://discord.gg/sE8R7e45MV) and ask there. Codes are mostly taken from the official google colab, and modified for local use.
-
-## Setup Environment
-Step 0:
-Download [anaconda](https://www.anaconda.com/products/individual)
-
-Download this repository
-
-Step 1:
-```sh
-conda create -n jojo python=3.7
-conda activate jojo
-cd <your codes file directory here>
-```
-Step 2 option 1: 30 series NVIDIA GPU
-```
-conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
-```
-Step 2 option 2: none 30 series NVIDIA GPU
-```
-conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
-```
-Step 2 option 3: CPU only (no NVIDIA GPU)
-```
-conda install pytorch torchvision torchaudio cpuonly -c pytorch
-```
-Step 3
-```
-pip install -r requirements.txt
-pip install cmake
-pip install dlib==19.20
-conda install -c conda-forge ffmpeg
-```
 
 ## Download Models
 checkpoints:
@@ -77,19 +33,6 @@ pretrained style models (optional):
 - [jojo_yasuho_preserve_color.pt](https://drive.google.com/file/d/1SKBu1h0iRNyeKBnya_3BBmLr4pkPeg_L/)
 - [art.pt](https://drive.google.com/file/d/1a0QDEHwXQ6hE_FcYEyNMuv5r5UnRQLKT/)
 
-model structure
-```
-📂JoJoGAN/ # this is root
-├── 📂models/
-│	├── 📜stylegan2-ffhq-config-f.pt
-│	├── 📜e4e_ffhq_encode.pt
-│	├── 📜restyle_psp_ffhq_encode.pt
-│	├── 📜dlibshape_predictor_68_face_landmarks.dat
-│	├── 📜<any pretrained style models>
-│	│...
-│...
-```
-
 ## Evaluate a Pretrained Style Model on Image
 Download the pretrained style model and put it under the `models` folder like in the diagram shown above. Put the input image in the `test_input` folder, in the following `image_name`, you don't need to provide the file path, just the file name.
 
@@ -99,15 +42,6 @@ python evaluate.py --input <image_name> --model_name <model_name> --seed <random
 eg.
 ```
 python evaluate.py --device cuda --input iu.jpeg --model_name jojo --seed 3000
-```
-## Evaluate a Pretrained Style Model on Video
-Put the input video in the `test_input` folder, in the following `video_name`, you don't need to provide the file path, just the file name.
-```sh
-python evaluate_video.py --input <video_name> --model_name <model_name> --seed <random_seed> --device <cuda/cpu>
-```
-eg.
-```
-python evaluate_video.py --device cuda --input elon.mp4 --model_name jojo --seed 3000
 ```
 
 ## Train a Custom Model
@@ -130,37 +64,6 @@ To evaluate the model, follow the previous step will do, just change the `model_
 ```
 python evaluate.py --device cuda --input iu.jpeg --model_name custom --seed 3000
 ```
-
-## Force training (manual align style image)
-When your style's face cannot be detected you can try using `force_train.py`. This is how I trained the colossal model. Save this [image](https://imgur.com/a/zBQbVVB), drag it into photoshop or [photopea](https://www.photopea.com/), match the style image you want with the features of this colossal titan. Eyes to eyes, nose to nose, ears to ears, jaws to jaws if possible. The more accurate the better. Drag it into the `style_images_aligned` folder and do:
-
-```sh
-python force_train.py --model_name <insert_name_here> --force_name <insert_style_image_here> --num_iter 300 --device cuda
-```
-eg.
-```
-python force_train.py --model_name colossal --force_name colossal --num_iter 300 --device cuda
-```
-and after getting the trained model, you can evaluate normally like any other models.
-
-my fork edits end here.
-
-
-## Updates
-
-* `2021-12-22` Integrated into [Replicate](https://replicate.com) using [cog](https://github.com/replicate/cog). Try it out [![Replicate](https://replicate.com/mchong6/jojogan/badge)](https://replicate.com/mchong6/jojogan)
-
-* `2022-02-03` Updated the paper. Improved stylization quality using discriminator perceptual loss. Added sketch model
-<br><img src="teasers/sketch.gif" width="50%" height="50%"/>
-* `2021-12-26` Added wandb logging. Fixed finetuning bug which begins finetuning from previously loaded checkpoint instead of the base face model. Added art model <details><br><img src="teasers/art.gif" width="50%" height="50%"/></details>
-
-* `2021-12-25` Added arcane_multi model which is trained on 4 arcane faces instead of 1 (if anyone has more clean data, let me know!). Better preserves features <details><img src="teasers/arcane.gif" width="50%" height="50%"/></details>
-
-* `2021-12-23` Paper is uploaded to [arxiv](https://arxiv.org/abs/2112.11641).
-* `2021-12-22` Integrated into [Huggingface Spaces 🤗](https://huggingface.co/spaces) using [Gradio](https://github.com/gradio-app/gradio). Try it out [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/akhaliq/JoJoGAN)
-* `2021-12-22` Added pydrive authentication to avoid download limits from gdrive! Fixed running on cpu on colab.
-
-
 
 ## How to use
 Everything to get started is in the [colab notebook](https://colab.research.google.com/github/mchong6/JoJoGAN/blob/main/stylize.ipynb).
