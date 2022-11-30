@@ -1,4 +1,4 @@
-# A/B Testing
+# Which pens do you choose? (A/B Testing)
 A/B Testing refers to a randomized experimentation process wherein two or more versions of a variable are shown to different segments of website visitors at the same time to determine which version leaves the maximum impact and drive business metrics.
 
 ## Let Explore!
