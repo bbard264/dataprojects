@@ -58,7 +58,7 @@ python train_mystyle.py --model_name <new_name> --alpha <alpha_value> --preserve
 
 eg.
 ```
-python train_custom_style.py --model_name custom --alpha 0.0 --preserve_color False --num_iter 300 --device cuda
+python train_mystyle.py --model_name custom --alpha 0.0 --preserve_color False --num_iter 300 --device cuda
 ```
 To evaluate the model, follow the previous step will do, just change the `model_name` to the one you just created. It'll just be like:
 ```
