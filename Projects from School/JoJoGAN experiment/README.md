@@ -48,7 +48,7 @@ python evaluate.py --device cuda --input iu.jpeg --model_name jojo --seed 3000
 Add images with the same style into the folder `style_images`. See inside the folder for example.
 
 ```sh
-python train_custom_style.py --model_name <new_name> --alpha <alpha_value> --preserve_color <True/False> --num_iter <number_of_iterations> --device <cuda/cpu>
+python train_mystyle.py --model_name <new_name> --alpha <alpha_value> --preserve_color <True/False> --num_iter <number_of_iterations> --device <cuda/cpu>
 ```
 - `model_name`: give your new model a name, maybe based on the style images?
 - `alpha`: the alpha value that'll determine the strength of the style. `0` = strongest, `1` = weakest. Float value between 0 and 1
