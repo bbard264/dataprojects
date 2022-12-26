@@ -1,4 +1,4 @@
-# CLV Dashbpard
+# CLV Dashboard
  We have explored our data "Supermarket.csv" and try to design dashboard and create it by power bi
  ## Consept
  1. We find out that some products of this store have very low amount of product sales.
