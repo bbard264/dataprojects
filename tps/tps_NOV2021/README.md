@@ -7,6 +7,8 @@ train.csv - the training data with the target column<br/>
 test.csv - the test set; you will be predicting the target for each row in this file (the probability of the binary target)<br/>
 sample_submission.csv - a sample submission file in the correct format<br/>
 
+https://www.kaggle.com/competitions/tabular-playground-series-nov-2021/data
+
 ## Exploring Data
 
 ## Feature Engineer
