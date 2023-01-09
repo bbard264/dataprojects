@@ -6,3 +6,5 @@
 - Currently studying deep learning and looking for ways to improve my knowledge in this area. <br/>
  
 # My Projects
+- CLV Dashboard
+-- We have explored the "Supermarket.csv" data and have designed a dashboard using Power BI to visualize and analyze the data
