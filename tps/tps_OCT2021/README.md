@@ -23,5 +23,5 @@ https://www.kaggle.com/competitions/tabular-playground-series-oct-2021/data
 
 
 ## Summarization
-* the dataset have oth binary and continuous features and have 1 million records that I use logistic regression to predict a test data to create submission file
-![image](https://user-images.githubusercontent.com/118603598/211375190-d141651d-5465-4607-956d-b75ab6d2fb7a.png)
+* the dataset have oth binary and continuous features and have 1 million records that I use logistic regression to predict a test data to create submission file<br/>
+![image](https://user-images.githubusercontent.com/118603598/211375551-39e95e83-01bb-44ad-a424-bda41cfda512.png)
