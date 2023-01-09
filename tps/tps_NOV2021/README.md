@@ -10,13 +10,19 @@ sample_submission.csv - a sample submission file in the correct format<br/>
 https://www.kaggle.com/competitions/tabular-playground-series-nov-2021/data
 
 ## Exploring Data
+- Train data <br/>
+![image](https://user-images.githubusercontent.com/118603598/211376512-bcea0451-0cee-4d70-a1aa-515fe0b9fe41.png)<br/>
+- Target <br/>
+![image](https://user-images.githubusercontent.com/118603598/211376535-fdbaf61a-f24c-4821-864f-59e5158de972.png)<br/>
+- There are no missing values in the dataset
+- The binary output is balanced
+- There are 100 continuous and independent features in the dataset.<br/>
+![image](https://user-images.githubusercontent.com/118603598/211377235-b1a024b6-e960-4aa9-aefb-dd92d3296643.png)<br/>
 
-## Feature Engineer
-
-## Analysis
-
-## Exploring Result
-
-## Validation
+## Analysis & Validation
+- The XGBClassifier will be used for classification, as it is capable of predicting a binary target output. <br/>
+![image](https://user-images.githubusercontent.com/118603598/211376821-3108fa0e-838d-4edd-bd00-fd219dfba399.png)<br/>
+![image](https://user-images.githubusercontent.com/118603598/211377362-e8fdbef8-6178-481f-8ea6-3246fc8e185e.png)<br/>
 
 ## Summarization
+- In this dataset, the goal is to predict a binary outcome based on 100 continuous features. There are no missing values, and the binary output is balanced. The XGBClassifier algorithm will be used to classify the data, and the AUC score after validation is 0.628. (The closer the AUC score is to 1, the better the model's performance. In this case, the AUC score of 0.628 after validation indicates that the model is performing moderately well in classifying the data.)
