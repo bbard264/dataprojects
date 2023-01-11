@@ -1,9 +1,10 @@
 # Video Games Recommendation
 here are file: https://drive.google.com/drive/u/0/folders/1n7IZZYySB78F9yDr3LFTALxti6vtjaCN <br/>
-This project is about Recommendation using cosine/jac-card similarity that based on Critic review, user review and video game type. <br/>
-following this step<br/>
+This project aims to create a recommendation system for video games using similarity metrics such as cosine and Jaccard similarity. Data was collected from the website metacritic.com, which includes reviews and scores from both critics and users. The collected data was then cleaned and prepared for analysis using the pandas library.. <br/>
+The project consists of the following steps:<br/>
 
-## 1. scarp the Data form metacritic.com, the website that include comment and score from video game critic for each video game. the I have 3 csv file for analytics<br/>
+## 1. Create Dataset<br/>
+Data was scraped from metacritic.com, resulting in three CSV files containing information about video games, critic reviews, and user reviews.<br/>
 - gamesdata.csv that contains infomation of video games<br/>
 ![image](https://user-images.githubusercontent.com/118603598/211808425-e0557625-b186-4cc7-8348-2bcbc82b31cb.png)<br/>
 ![image](https://user-images.githubusercontent.com/118603598/211808535-53e2761b-0360-4699-8139-8d1d6aa6793d.png)<br/>
@@ -16,18 +17,22 @@ following this step<br/>
 ![image](https://user-images.githubusercontent.com/118603598/211808732-748d257c-6eab-4fb8-840c-9e51ea2bba1c.png)<br/>
 ![image](https://user-images.githubusercontent.com/118603598/211809424-248eafac-cae4-420d-a9b4-40eeb563f093.png)<br/>
 
-## 2. clearning data and prepare for analytics. In this process, I use pandas for operate the dataframe then I have a dataframe for calculate cosine similarity<br/>
+## 2. clearning data <br/>
+Data was cleaned and prepared for analysis using the pandas library, resulting in a dataframe for calculating cosine similarity.<br/>
 ![image](https://user-images.githubusercontent.com/118603598/211809659-7d2902e3-7699-47a5-9072-f741305dd1db.png)<br/>
 ![image](https://user-images.githubusercontent.com/118603598/211810020-38ff187d-c449-43b9-a3be-3e833bc22080.png)<br/>
 
 
-## 3. calculated cosine similarity/Jac-card similarity for recommendationv
-- get the genre information for gamesdata.csv to calculated jac-card similarity based on genre, this is a product-base recommendation (If the game have genre in common,these game should similarity each other)v
+## 3. Calculated cosine similarity/Jac-card similarity for recommendation.
+In order to implement a recommendation system, we will calculate the Jaccard similarity and cosine similarity based on the genre and scores of the video games <br/>
 
-- get the critic score and user score for each video game to calculated cosine similarity based on score, this is a user-base recommendation (that I use infomation form review instead of purchasing, the ideas is if critic like some video game, they will give high score to the video game so if we like the game that this critic give hight score, we should like other video game that the critic give high score too.)<br/>
+- we will extract the genre information for each game in the dataset and use Jaccard similarity to determine the similarity between the games based on their common genres. This will serve as a product-based recommendation, as games with similar genres will be considered similar to each other<br/>
 
-## 4. input the game ID, it will show the video games that have high cosine/jaccard similarity that means the high of cosine/jaccard similarity, the high similarity to the input game. then if you are customer and you like the input game much,you can use this output as infomation to find other video games that similar.<br/>
-![image](https://user-images.githubusercontent.com/118603598/211811203-07d2de72-e66b-4530-94bc-c87b1c0abe5a.png)v
+- we will extract the critic score and user score for each video game in the dataset. Using cosine similarity, we will then determine the similarity between the games based on these scores. This will serve as a user-based recommendation, as we will use information from reviews to determine which games are similar to each other. The idea behind this approach is that if a critic likes a certain video game and gives it a high score, it is likely that other games that receive high scores from the same critic will also be liked by users who enjoyed the first game.<br/>
+
+## 4. Result , <br/>
+The user inputs a game ID, and the system returns a list of games that have high cosine/Jaccard similarity to the input game. This serves as a guide for the user to find similar games they may enjoy.<br/>
+![image](https://user-images.githubusercontent.com/118603598/211811203-07d2de72-e66b-4530-94bc-c87b1c0abe5a.png)
 
 
 
