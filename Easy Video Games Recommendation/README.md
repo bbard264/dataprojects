@@ -32,6 +32,7 @@ In order to implement a recommendation system, we will calculate the Jaccard sim
 
 ## 4. Result , <br/>
 The user inputs a game ID, and the system returns a list of games that have high cosine/Jaccard similarity to the input game. This serves as a guide for the user to find similar games they may enjoy.<br/>
+As an example, if we input the names of the video games "Pokemon Shield, Overcooked! 2, Overwatch" the recommendation will suggest other games that are similar to those inputs. For the first row of the input, the cosine similarity should be 1 because it's same video games. <br/>
 ![image](https://user-images.githubusercontent.com/118603598/211811203-07d2de72-e66b-4530-94bc-c87b1c0abe5a.png)
 
 
