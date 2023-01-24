@@ -24,5 +24,5 @@
 -- A project using NLP to analyze customer comments and KMeans clustering to group customers. <br/>
 - **Which pens do you choose_ (AB Testing)**
 -- A t-test to compare the results of two choices and determine which customers prefer.<br/>
-- **tps**
+- **Tabular Playground Series**
 -- A project to practice skills as an analyst<br/>
