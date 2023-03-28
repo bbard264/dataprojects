@@ -1,5 +1,0 @@
-## Tabular Playground Series (TPS)
-
-**The Tabular Playground Series** is a series of data science competitions hosted on the Kaggle platform. These competitions are designed to be more approachable for those who are new to data science, and offer a fun and educational experience for all participants. Each competition features a tabular dataset that participants can use to build a model, and the top three teams will be awarded Kaggle merchandise as a prize. These competitions are open to individuals or teams of up to three people, and are focused on skill development and learning.
-
-The Tabular Playground Series is a great opportunity for data science enthusiasts to challenge themselves and improve their skills. Whether you're just starting out in the field or you're an experienced professional looking to keep your skills sharp, these competitions offer a chance to learn and grow. Participating in the Tabular Playground Series is a rewarding and enjoyable way to engage with the data science community and compete against others from around the world.
