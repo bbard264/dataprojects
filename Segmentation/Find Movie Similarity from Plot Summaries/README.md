@@ -7,7 +7,7 @@ Outline
 1. Importing the dataset 
     - these dataset get from wikipedia and imdb that contain plot on each movies.
 
-![image](https://user-images.githubusercontent.com/118603598/230375489-51b86faa-23be-4666-9acf-71505b8a91e4.png)</br>
+![image](https://user-images.githubusercontent.com/118603598/230375489-51b86faa-23be-4666-9acf-71505b8a91e4.png)
 
 
 2. Pre Proccessing Data
