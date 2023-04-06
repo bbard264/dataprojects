@@ -6,6 +6,10 @@ Moreover, with so many movies available nowadays, it can take a long time to rea
 Outline
 1. Importing the dataset 
     - these dataset get from wikipedia and imdb that contain plot on each movies.
+
+![image](https://user-images.githubusercontent.com/118603598/230375489-51b86faa-23be-4666-9acf-71505b8a91e4.png)</br>
+
+
 2. Pre Proccessing Data
     1. Combine Wikipedia and IMDb plot summaries.
         - Combining plot summaries from both Wikipedia and IMDb will provide a larger dataset for analysis and more accurate results.
