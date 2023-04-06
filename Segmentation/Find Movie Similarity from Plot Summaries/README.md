@@ -6,12 +6,12 @@ Moreover, with so many movies available nowadays, it can take a long time to rea
 Outline
 1. Importing the dataset 
     - these dataset get from wikipedia and imdb that contain plot on each movies.
-    - ![image](https://user-images.githubusercontent.com/118603598/230375810-15d3e66b-ae0c-4854-a304-b4132ed092e7.png)
+![image](https://user-images.githubusercontent.com/118603598/230375810-15d3e66b-ae0c-4854-a304-b4132ed092e7.png)
 
 2. Pre Proccessing Data
     1. Combine Wikipedia and IMDb plot summaries.
         - Combining plot summaries from both Wikipedia and IMDb will provide a larger dataset for analysis and more accurate results.
-        - ![image](https://user-images.githubusercontent.com/118603598/230375883-fc2b5fd5-6f28-498e-ad8e-5e735d14532e.png)
+![image](https://user-images.githubusercontent.com/118603598/230375883-fc2b5fd5-6f28-498e-ad8e-5e735d14532e.png)
     2. Tokenization
         - Tokenization breaks down the plot summaries into individual words for analysis.
         - "\n                        Today (May 19, 2016) is his only daughter's wedding.", 'Vito Corleone is the Godfather.'
@@ -24,26 +24,36 @@ Outline
     5. Create TfidfVectorizer and Fit transform TfidfVectorizer
         - TfidfVectorizer will convert the plot summaries into numerical vectors for analysis.
         - Fit transform TfidfVectorizer to convert the plot summaries into numerical vectors for clustering.
-        - ![image](https://user-images.githubusercontent.com/118603598/230376158-ef53fa0b-c595-4570-a132-61bc51f64bb8.png)
+![image](https://user-images.githubusercontent.com/118603598/230376158-ef53fa0b-c595-4570-a132-61bc51f64bb8.png)
 
 3. Modeling
     1. Import KMeans and create clusters
         - Importing KMeans and creating clusters will group the movies with similar plots together.
-        - ![image](https://user-images.githubusercontent.com/118603598/230376293-55ec4a7d-7dfa-4237-a5f9-2753fbcbc645.png)
+![image](https://user-images.githubusercontent.com/118603598/230376293-55ec4a7d-7dfa-4237-a5f9-2753fbcbc645.png)
     2. Calculate similarity distance
         - Calculating similarity distance will help identify which movies are more similar to each other.
-        - ![image](https://user-images.githubusercontent.com/118603598/230376354-58127a8e-555a-43e2-89ec-3ebbbeae9f5f.png)
+![image](https://user-images.githubusercontent.com/118603598/230376354-58127a8e-555a-43e2-89ec-3ebbbeae9f5f.png)
 
 4. Validation
     - Evaluating the performance of the clustering algorithm
-    - ![image](https://user-images.githubusercontent.com/118603598/230376395-d32a0cac-1222-49fa-b0c9-24d60fef3eab.png)
-    - ![image](https://user-images.githubusercontent.com/118603598/230376472-d5fba43a-b938-41ab-9639-e1d2c50714ed.png)
-    - ![image](https://user-images.githubusercontent.com/118603598/230376568-ed061de3-ee24-4875-9347-791a625235bc.png)
+![image](https://user-images.githubusercontent.com/118603598/230376395-d32a0cac-1222-49fa-b0c9-24d60fef3eab.png)
+![image](https://user-images.githubusercontent.com/118603598/230376472-d5fba43a-b938-41ab-9639-e1d2c50714ed.png)
+![image](https://user-images.githubusercontent.com/118603598/230376568-ed061de3-ee24-4875-9347-791a625235bc.png)
     
 5. Data Visuialization
     1. Import Matplotlib, Linkage, and Dendrograms
         - Importing Matplotlib, Linkage, and Dendrograms will create a visual representation of the relationship between the movies.
     2. Create merging and plot dendrogram
         - Creating merging and plotting dendrograms will allow for a better understanding of the clusters formed and which movies are more closely related to each other.
-        - ![image](https://user-images.githubusercontent.com/118603598/230376642-d0ae9a68-caa7-48cb-8090-0ea92b3fae6c.png)
+![image](https://user-images.githubusercontent.com/118603598/230376642-d0ae9a68-caa7-48cb-8090-0ea92b3fae6c.png)
 
+
+*** A dendrogram is a type of tree diagram used to illustrate the arrangement of clusters produced by hierarchical clustering. In a dendrogram, the observations or data points are represented as leaves, and the clusters formed by the clustering algorithm are represented as branches that connect the leaves.
+
+The y-axis of a dendrogram represents the distance or dissimilarity between the clusters at each level of the hierarchy. The height of each branch corresponds to the distance or dissimilarity between the two clusters that are being merged at that level.
+
+To read a dendrogram, you start at the bottom of the tree where the individual observations are located. As you move up the tree, the branches represent the merging of clusters. The height of each branch tells you the distance or dissimilarity between the clusters being merged.
+
+At each level of the hierarchy, the dendrogram splits into two or more branches, each representing a separate cluster. The number of clusters in the final solution depends on the distance or dissimilarity threshold chosen to cut the dendrogram.
+
+To interpret the clusters in a dendrogram, you can examine the shape and structure of the tree to identify groups of observations that are similar to each other. The closer the observations are to each other in the dendrogram, the more similar they are in terms of their attributes. Conversely, observations that are far apart in the dendrogram are dissimilar to each other.
